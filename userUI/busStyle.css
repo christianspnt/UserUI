@@ -1,0 +1,1687 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top left, #4f7198, #f9ce80, #4f7198);
+    background-position: top left;
+    background-size: cover;
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 370px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    object-position: center 38%;
+    position: relative; /* Default position */
+    z-index: 1; /* Ensure it is below the heading */ 
+}
+
+/* Icons on the Image */
+.icons {
+    position: absolute;
+    top: 20px;
+    right: 55px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icons img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icons hr {
+    border: none;
+    border-left: 2px solid #b8b8b8;
+    height: 30px;
+    z-index: 2;
+}
+
+/* Profile Box */
+.profile-box {
+position: absolute;
+top: 60px;
+right: 20px;
+background: rgba(60, 77, 99, 0.92);
+color: rgba(60, 77, 99, 0.92);
+border-radius: 3px;
+padding: 20px;
+width: 230px;
+display: none;
+z-index: 1000;
+}
+
+/* Header Button for Profile and Manage Profile */
+.profile-header {
+display: flex;
+align-items: center;
+justify-content: flex-start;
+width: 100%;
+background: none; /* Transparent */
+border: none;
+cursor: pointer;
+text-align: left;
+padding: 10px;
+margin-bottom: 8px;
+color: black;
+}
+
+.profile-header:hover {
+background: rgba(184, 184, 184, 0.34); /* Light background on hover */
+border-radius: 3px;
+}
+
+/* Profile Info Section */
+.profile-info {
+display: flex;
+flex-direction: column;
+}
+
+/* Name and Manage Profile Styling */
+.profile-name {
+font-weight: bold;
+margin: 0;
+font-size: 14px;
+}
+
+.profile-manage {
+font-size: 10px;
+margin: 0;
+color: #b8b8b8;
+}
+
+/* Separator (HR) */
+.profile-box hr {
+border: none;
+border-top: 3px solid rgba(184, 184, 184, 0.34);
+margin: 10px 0;
+}
+
+/* Buttons for Other Options */
+.profile-box .buttons {
+display: flex;
+align-items: center;
+justify-content: flex-start;
+width: 100%;
+background: #fff;
+border: none;
+border-radius: 8px;
+padding: 10px;
+margin-bottom: 10px;
+cursor: pointer;
+}
+
+.profile-box button img {
+width: 25px;
+height: 25px;
+margin-right: 10px;
+}
+
+.profile-box button:hover {
+background: #e2bb70;
+}
+
+/* Align icons and button text */
+.profile-box button span {
+font-size: 14px;
+color: #333;
+}
+
+.profile-box .Outbuttons {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+background: #fff;
+border: none;
+border-radius: 8px;
+padding: 10px;
+margin-bottom: 10px;
+cursor: pointer;
+text-align: center;
+font-weight: bold;
+}
+
+/* Main Content */
+.body {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.heading {
+position: absolute; /* Position it relative to the .body */
+top: -150px; /* Adjust this to control vertical positioning */
+left: 50%; /* Center it horizontally */
+transform: translateX(-50%); /* Center alignment */
+font-size: 20px;
+font-weight: lighter;
+color: #606060;
+border-radius: 5px;
+z-index: 2; /* Ensure it is above the image */
+}
+
+
+.box {
+position: absolute;
+top: 5%; /* Adjust to overlap 50% */
+left: 50%;
+transform: translate(-50%, -50%);
+width: 30%; /* Keep compact */
+background: rgba(255, 255, 255, 0.92);
+border-radius: 8px;
+padding: 20px 30px;
+margin-bottom: 50px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+text-align: left;
+z-index: 2;
+}
+
+.box .trip-info {
+display: flex;
+flex-direction: row; /* Make sure this is horizontal */
+align-items: center;
+gap: 10px;
+margin-top: 10px;
+}
+
+.box .trip-title {
+font-size: 21px;
+font-weight: lighter;
+margin-bottom: 10px; /* Space below title */
+display: block; /* Ensure it is on its own line */
+}
+
+.box .trip-info span {
+font-weight: bold; /* Make "CSB Terminal" bold */
+font-size: 24px;
+}
+
+
+.box .trip-info .form-bus input {
+background: rgba(184, 184, 184, 0.54);
+border: none;
+border-radius: 5px;
+padding: 12px;
+width: 130%; /* Take up all available space */
+font-size: 14px;
+}
+ 
+
+/* Make sure the date is on its own line */
+.box .date {
+font-size: 21px;
+font-weight: lighter;
+margin-top: 25px;
+display: block; /* Ensures it is on its own line */
+}
+.box .date span {
+display: block; /* Keeps the current date on its own line */
+font-size: 24px;
+font-weight: bold;
+}
+
+/* Styling for datalist to match input field */
+.box .trip-info input[type="text"] {
+background: rgba(184, 184, 184, 0.54);
+color: #000; /* Match input text color */
+}
+
+.box .trip-info input[type="text"]::-webkit-datalist {
+background: rgba(184, 184, 184, 0.54); /* Match datalist background */
+}
+
+
+
+.search-btn {
+    display: block;
+    margin: 120px auto;
+    background: #fff;
+    border: none;
+    font-size: 13px;
+    font-weight: lighter;
+    border-radius: 10px;
+    padding: 12px 75px;
+    cursor: pointer;
+}
+
+/* Second box (container) */
+.second-box {
+width: 100%;
+background-color: #fff;
+padding: 5px 30px;
+box-sizing: border-box;
+overflow-x: auto;  /* Enables horizontal scrolling */
+white-space: nowrap; /* Prevents wrapping of the cards */
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Header for Bus Availability */
+.availability-header {
+font-size: 14px;
+font-weight: bold;
+margin-bottom: 10px;
+color: #333;
+}
+
+/* Container for the bus destination wrappers */
+.availability-content {
+display: flex;
+gap: 15px;
+overflow-x: scroll;
+}
+
+/* Destination Wrapper */
+.destination-wrapper {
+display: inline-block;
+text-align: center; /* Center-aligns content inside the wrapper */
+}
+
+/* Bus Destination Card */
+.destination-card {
+display: inline-block;
+background: rgba(184, 184, 184, 0.82);
+padding: 40px 30px;
+border-radius: 5px;
+width: auto; /* Automatically adjusts width */
+min-width: 200px; /* Sets a minimum width for each card */
+}
+
+/* Bus Destination Name */
+.destination-name {
+font-weight: bold;
+font-size: 20px;
+margin-bottom: 5px;
+}
+
+/* Availability Indicator */
+.availability-status {
+font-size: 14px;
+font-weight: bold;
+padding: 5px;
+border-radius: 5px;
+margin-top: 15px;
+margin-bottom: 20px;
+text-align: center;
+}
+
+/* Available Status */
+.available {
+color: white;
+background-color: #3c4d63;
+}
+
+/* Not Available Status */
+.not-available {
+color: white;
+background-color: #e2bb70;
+}
+
+/* Customize the scrollbar for horizontal scrolling */
+.availability-content::-webkit-scrollbar {
+height: 8px; /* Adjust scrollbar height */
+}
+
+.availability-content::-webkit-scrollbar-thumb {
+border-radius: 10px;
+background-color: #bbb;
+}
+
+.availability-content::-webkit-scrollbar-track {
+background-color: #f0f0f0;
+}
+
+
+/* Footer Section */
+footer {
+    margin-top: 100px;
+    background: #e2bb70;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+footer .wave {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+}
+
+/*LOGIN.PHP CSS STYLE*/
+
+.body-login {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #4f7198, #4f7198, #f9ce80);
+    display: flex;
+    height: 100vh;
+    color: #fff;
+}
+.image-section-login {
+    flex: 1.13;
+    background: url('images/img1.jpeg') no-repeat center center;
+    background-size: cover;
+}
+.form-section-login {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.form-section-login input {
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 60px;
+    padding: 20px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #254422;
+}
+.forgot-pass-login {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    align-self: right;
+    margin-left: 540px; /* Adjust spacing if needed */
+}
+.forgot-pass-login:hover {
+    text-decoration: underline;
+}
+.login-button1 {
+    padding: 13px 85px; /* Makes the button smaller */
+    margin: 15px auto; /* Centers the button */
+    display: block;
+    font-weight: bolder;
+    width: auto; /* Adapts to the content size */
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+.centered-register-login {
+    text-align: center; /* Centers the text */
+    margin-top: 15px;
+    font-size: 12px;
+}
+.centered-register-login a {
+    text-decoration: underline;
+    color: #fff;
+    font-size: 12px;
+}
+.separator-login {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    margin-left: 40px;
+    width: 88%;
+}
+.separator-login::before,
+.separator-login::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #fff;
+}
+.separator-login span {
+    margin: 0 10px;
+    font-size: 14px;
+    color: #254422;
+}
+.social-btn-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 33px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.26);
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+.img1 {
+    width: 35px;
+    margin: 0 7px;
+}
+.img2 {
+    width: 42px;
+    margin: 0 7px;
+}
+.img3 {
+    width: 24px;
+    margin: 0 7px;
+}
+.form-section-login p {
+    margin-top: 10px;
+}
+.form-section-login p a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/*LOGIN.PHP CSS STYLE ENDS HERE*/
+
+/*REGISTER.PHP CSS STYLE*/
+.body-register {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(168deg, #4f7198, #f9ce80, #4f7198);
+    display: flex;
+    height: 100vh;
+    color: #fff;        
+}
+.image-section-rgstr {
+    flex: 1.13;
+    background: url('images/img1.jpeg') no-repeat center center;
+    background-size: cover;
+}
+.form-section-rgstr {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.form-section-rgstr input {
+    width: 80%;
+    margin-top: 10px;
+    margin-left: 60px;
+    padding: 20px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #254422;
+}
+.sign-up-button-rgstr {
+    padding: 13px 85px;
+    margin: 15px auto;
+    display: block;
+    font-weight: bolder;
+    width: auto;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+.centered-login-rgstr {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+}
+.centered-login-rgstr a {
+    text-decoration: underline;
+    color: #fff;
+    font-size: 12px;
+}
+.separator-rgstr {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    margin-left: 40px;
+    width: 88%;
+}
+.separator-rgstr::before,
+.separator-rgstr::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #fff;
+}
+.separator-rgstr span {
+    margin: 0 10px;
+    font-size: 14px;
+    color: #254422;
+}
+.social-btn2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 33px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.26);
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+.img1 {
+    width: 35px;
+    margin: 0 7px;
+}
+.img2 {
+    width: 42px;
+    margin: 0 7px;
+}
+.img3 {
+    width: 24px;
+    margin: 0 7px;
+}
+
+/*REGISTER.PHP CSS STYLE ENDS HERE*/
+
+/*DETAILS.PHP CSS STYLE*/
+.body-details {
+    margin: 45px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: radial-gradient(circle at top left, #4f7198, #f9ce80, #4f7198);
+    background-position: top left;
+    height: 100vh;
+    overflow: hidden;
+}
+.h2-details {
+    margin-left: 85px;
+    margin-top: 113px;
+}
+.hr-details {
+    width: 35%;
+    border: 3px solid rgba(233, 233, 233, 0.9);
+    margin: 5px 70px 3px 85px;
+}
+.form-section-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 5px 70px 60px 70px;
+}
+.form-left-details,
+.form-right-details {
+    width: 46%;
+}
+.form-group-details {
+    margin-bottom: 20px;
+}
+.form-group-details input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(233, 233, 233, 0.9);
+    color: #254422;
+}
+.form-group-details label {
+    display: block;
+    font-size: 12px;
+    margin: 5px 0 0 5px;
+}
+.age-sex-container-details {
+    display: flex;
+    gap: 10px;
+}
+.age-sex-container-details .form-group-details {
+    flex: 1;
+}
+.sex-details {
+    margin-left: 35px;
+}
+input[type="date"]::-webkit-datetime-edit {
+    text-transform: uppercase;
+    color: #254422;
+}
+input[type="date"] {
+    color: #254422;
+}
+.submit-btn-details {
+    display: block;
+    margin: 20px auto;
+    padding: 13px 130px;
+    border-radius: 8px;
+    border: none;
+    background: rgba(233, 233, 233, 0.9);
+    color: #254422;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.submit-btn-details:hover {
+    background: #fff;
+}
+
+/*DETAILS.PHP CSS STYLE ENDS HERE*/
+
+/*MESSAGE.PHP CSS STYLE*/
+/* General Styling */
+.body-message {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top left, #4f7198, #f9ce80, #4f7198);
+    background-position: top left;
+    margin: 3px;
+    padding: 0;
+    overflow: hidden; /* Prevent extra scroll bars */
+}
+
+/* Header */
+.header-message {
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    background: transparent;
+    color: white;
+}
+
+.back-button-message {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.header-title-message {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+
+/* Content Layout */
+.content-message {
+    display: flex;
+    height: calc(100vh - 60px); /* Adjust based on header height */
+}
+
+/* Filter Buttons Section */
+.filter-buttons-message {
+    flex: 0 0 19%;
+    background: transparent;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+
+.filter-btn-message {
+    background: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.filter-btn-message.active {
+    background: #e2bb70;
+}
+
+/* Vertical Separator */
+.vertical-separator-message {
+    border-left: 3px solid white;
+    border-radius: 3px;
+    height: 98%;
+    margin: 0 12px;
+}
+
+/* Messages Box */
+.messages-box {
+    flex: 0 0 75.5%;
+    padding: 13px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.no-messages {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%; /* Ensures it fills the message box */
+color: #b8b8b8;
+text-align: center; /* Center-align the text */
+}
+
+.no-messages img {
+margin-top: 185px;
+width: 30%; /* Adjust the size based on box dimensions */
+height: auto; /* Maintain aspect ratio */
+image-rendering: auto; /* Prevent pixelation */
+-ms-interpolation-mode: bicubic;
+}
+
+/* Options Menu */
+.options-message {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.dots-message {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.dropdown-menu-message {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    display: none;
+}
+
+.dropdown-menu-message button {
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.dropdown-menu-message button:hover {
+    background: #e2bb70;
+}
+
+/* Message Container */
+.message-container {
+    margin-top: 40px;
+    display: none;
+}
+
+.message {
+    padding: 10px;
+    background: rgba(184, 184, 184, 0.92);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.message-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.message-preview {
+    font-size: 14px;
+    color: #555;
+    margin-left: 10px;
+}
+
+.content-message {
+    box-sizing: border-box;
+}
+
+/*MESSAGE.PHP CSS STYLE ENDS HERE*/
+
+/*INPUTBOOKINGDETAILS.PHP CSS STYLE*/
+.body-inputBooking {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top left, #4f7198, #f9ce80, #4f7198);
+    background-position: top left;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-button-inputBooking {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.booking-container-inputBooking {
+    background: white;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    height: 80%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.switch-container-inputBooking, .checkbox-container-inputBooking, .form-group-inputBooking {
+    margin-bottom: 20px;
+}
+
+.switch-container-inputBooking {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.switch-container-inputBooking label {
+    margin-left: 10px;
+}
+
+.switch-inputBooking {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch-inputBooking input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider-inputBooking {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider-inputBooking:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider-inputBooking {
+    background-color: #4f7198;
+}
+
+input:checked + .slider-inputBooking:before {
+    transform: translateX(20px);
+}
+
+.input-row-inputBooking {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-row-inputBooking input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-row-inputBooking input[disabled] {
+    background: #f5f5f5;
+    color: #b8b8b8;
+    cursor: not-allowed;
+}
+
+
+.readonly-field-inputBooking {
+    background: #f5f5f5;
+    color: #b8b8b8;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    width: 95%;
+}
+
+.checkbox-container-inputBooking {
+display: flex;
+flex-direction: row; /* Aligns items in a single row */
+gap: 15px;
+margin-top: 18px;
+margin-bottom: 20px;
+}
+
+.custom-radio-inputBooking {
+display: flex;
+align-items: center;
+gap: 10px;
+cursor: pointer;
+}
+
+.custom-radio-inputBooking input[type="radio"] {
+display: none; /* Hide the default radio button */
+}
+
+.custom-radio-box {
+width: 13px;
+height: 13px;
+border: 2px solid #4f7198;
+border-radius: 4px; /* Makes the box square */
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 10px;
+font-weight: bold;
+color: transparent;
+background: #b8b8b8; /* Default background color */
+}
+
+.custom-radio-inputBooking input[type="radio"]:checked + .custom-radio-box {
+background: #b8b8b8; /* Keeps the background the same */
+color: #3c4d63; /* Checkmark color */
+}
+
+
+.quantity-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: -800px;
+    margin-left: -40px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity label {
+    margin-right: 10px;
+    margin-bottom: 90px;
+    font-weight: bold;
+}
+
+.quantity button {
+    width: 45px;
+    height: 30px;
+    font-size: 20px;
+    margin: 0 5px;
+    border: transparent;
+}
+
+.quantity input {
+    width: 55px;
+    text-align: center;
+    font-size: 16px;
+    height: 30px;
+    border: transparent;
+    background-color: #f0f0f0;
+}
+
+.quantity-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    margin-left: -65px;
+}
+
+.quantity-wrapper input {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    width: 40px;
+}
+
+
+.dropdown-row-inputBooking, .action-row-inputBooking {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.dropdown-row-inputBooking {
+display: flex;
+flex-direction: column;
+gap: 5px;
+margin-top: -30px;
+margin-bottom: 20px;
+}
+
+.dropdown-row-inputBooking label {
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+.dropdown-container-inputBooking {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.dropdown-container-inputBooking select,
+.dropdown-container-inputBooking input[type="file"] {
+width: 50%; /* Ensures both elements take up equal space */
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box; /* Ensures proper padding and border inclusion */
+}
+
+.action-row-inputBooking {
+display: flex;
+gap: 10px;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.action-row-inputBooking button {
+padding: 10px;
+background-color: #4f7198;
+color: white;
+border: 1px solid #4f7198;
+border-radius: 5px;
+cursor: pointer;
+flex: 1; /* Ensures all elements align consistently */
+text-align: center;
+}
+
+.action-row-inputBooking button:disabled {
+background-color: #ccc;
+border: 1px solid #ccc;
+cursor: not-allowed;
+}
+
+.action-row-inputBooking select,
+.action-row-inputBooking input[type="text"] {
+flex: 1; /* Adjust width proportionately */
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 5px;
+background-color: white;
+}
+
+
+.confirm-button-inputBooking {
+    margin: auto;
+    display: block;
+    padding: 10px 20px;
+    width: 40%;
+    background: linear-gradient(to right, #4f7198, #f9ce80);;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm-button-inputBooking:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/*INPUTBOOKINGDETAILS.PHP CSS STYLE ENDS HERE*/
+
+/*GROUPDETAILS.PHP CSS STYLE*/
+.body-gd {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top left, #4f7198, #f9ce80, #4f7198);
+    background-position: top left;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-gd {
+background: white;
+border-radius: 10px;
+padding: 20px;
+width: 100%;
+max-width: 600px;
+max-height: 80vh; /* Limit height to 80% of the viewport */
+overflow-y: auto; /* Enable vertical scrolling */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container-gd h1 {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #4f7198;
+}
+
+.input-field-set-gd {
+    margin-bottom: 20px;
+}
+
+.input-field-set-gd h3 {
+    color: #4f7198;
+}
+
+.input-field-set-gd label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-field-set-gd input,
+.input-field-set-gd select {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-back-gd {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.confirm-button-gd {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 50%;
+padding: 10px;
+margin: 20px auto; /* Centers the button horizontally */
+background: linear-gradient(to right, #4f7198, #f9ce80);
+border: none;
+border-radius: 5px;
+font-size: 16px;
+color: white;
+cursor: pointer;
+text-align: center;
+}
+
+
+.confirm-button-gd:hover {
+    opacity: 0.9;
+}
+
+/*GROUPDETAILS.PHP CSS STYLE ENDS HERE*/
+
+/*BUS.PHP CSS STYLE*/
+.body-bus {
+    margin-top: 100px;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top left, #4f7198, #f9ce80, #4f7198);
+    background-position: top left;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+.back-button-bus {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.booking-container-bus {
+    max-width: 560px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.booking-container-bus h2 {
+    font-size: 20px;
+    text-align: left;
+}
+.centered-trip-button-bus {
+text-align: center;
+margin: 20px auto;
+max-width: 600px; /* Matches the box container width */
+}
+
+.trip-button-bus {
+width: 100%; /* Takes the full width of the parent container */
+padding: 20px;
+font-size: 16px;
+text-align: left;
+border: none;
+border-radius: 8px;
+background-color: #f9f9f9;
+cursor: pointer;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.trip-button-bus:hover {
+background-color: #b8b8b8;
+transform: scale(1.02);
+}
+.hr-bus {
+max-width: 600px; /* Matches the box container and button width */
+margin: 20px auto; /* Centers the line and adds spacing */
+border: none; /* Removes default border styling */
+height: 3px; /* Sets the height of the line */
+background-color: #ccc; /* Adds a subtle color */
+}
+
+.error-icon-bus {
+    width: 250px;
+    margin: 20px auto;
+}
+.scrollable-box-bus {
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px auto;
+}
+.scrollable-box-bus .history-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 90%;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+}
+.scrollable-box-bus .history-button:hover {
+    background-color: #0056b3;
+}
+
+/*BUS.PHP CSS STYLE ENDS HERE*/
+
+/*TRIP.PHP CSS STYLE*/
+.body-trip {
+    background: radial-gradient(circle at top left, #4f7198, #f9ce80, #4f7198);
+    background-position: top left;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.back-button-trip {
+    font-size: 20px;
+    margin: 10px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.container-trip {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.h2-trip {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.input-row-trip {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.input-row-trip input {
+    width: 48%;
+}
+.readonly-trip {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+}
+.modify-section-trip {
+    margin-top: 20px;
+}
+.modify-section-trip input[type="checkbox"] {
+    margin-right: 10px;
+}
+.action-row-trip {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*TRIP.PHP CSS STYLE ENDS HERE*/
+
+/*BOOKING.PHP CSS STYLE*/
+.trips-container-bkng {
+    display: flex;
+    flex-direction: column; /* Make the trips stack vertically */
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    background-color: transparent;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    gap: 20px; /* Space between each trip container */
+    padding: 10px; /* Padding around the entire container */
+}
+
+.trip-bkng {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: 0.3s;
+    width: 200px;
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+.trip-bkng:hover {
+    background-color: #e2bb70;
+}
+
+a.trip-link {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100%;
+}
+
+.trip-info-bkng span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    margin: 5px 0;
+}
+
+.trip-time-bkng {
+    font-size: 14px;
+    color: #606060;
+}
+
+.trip-price-bkng {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3c4d63;
+}
+
+/* Styling for the 'No trips available' message */
+.no-trips-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 20px 0;
+}
+
+.no-trips-bkng {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #b8b8b8;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/*BOOKING.PHP CSS STYLE ENDS HERE*/
+
+/*PROFILE.PHP CSS STYLE*/
+        .body-prfl {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at top left, #4f7198, #f9ce80, #4f7198);
+            background-position: top left;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .profile-container-prfl {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .nav-bar-prfl {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .back-button-prfl {
+            background: none;
+            border: none;
+            font-size: 29px;
+            cursor: pointer;
+            margin-right: 10px;
+            color: white;
+        }
+
+        .nav-bar-prfl h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .profile-content-prfl {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .left-section-prfl {
+            width: 29%;
+            text-align: center;
+        }
+
+        .profile-picture-prfl img {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+        }
+
+        .passenger-name-prfl {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .update-btn-prfl {
+            margin-top: 150px;
+            padding: 10px 70px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .update-btn-prfl:hover {
+            background-color: #3c4d63;
+        }
+
+        hr.vertical-divider-prfl {
+    width: 2px; /* Thickness of the line */
+    height: 100%; /* Full height of the container */
+    background-color: #ccc; /* Line color */
+    border: none; /* Remove default border */
+    margin: 0 20px; /* Add spacing around the line */
+    display: inline-block; /* Ensure it behaves like a block-level element */
+}
+
+
+.right-section-prfl {
+    margin-top: 45px;
+    margin-left: -10px;
+    margin-right: 55px;
+    flex: 1;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Adds a subtle shadow effect */
+}
+
+
+        .info-row-prfl {
+            margin-bottom: 20px;
+        }
+
+        .info-row-prfl label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 7px;
+            color: white;
+        }
+
+        .info-row-prfl input {
+            width: 97%;
+            border: none;
+            border-bottom: 2px solid #ccc;
+            padding: 5px;
+            font-size: 14px;
+            background: none;
+            outline: none;
+            color: white;
+            margin-bottom: 7px;
+        }
+
+        .info-row-prfl input:focus {
+            border-bottom: 2px solid #4f7198;
+        }
+    
+
+/*PROFILE.PHP CSS STYLE ENDS HERE*/
+
+/*CARD.PHP CSS STYLE*/
+.body-card {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top left, #4f7198, #f9ce80, #4f7198);
+    background-position: top left;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.header-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.back-button-card {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.title-card {
+    flex: 1;
+    text-align: left;
+    font-size: 24px;
+    color: #fff;
+    margin-right: 50px;
+}
+
+.tap-card-box-card {
+    background: radial-gradient(circle at top left, #4f7198, #f9ce80, #4f7198);
+    background-position: top left;
+    background-size: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 420px;
+    height: 230px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 50px auto;
+    color: #fff;
+    position: relative;
+}
+
+.tap-card-title-card {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.tap-card-subtitle-card {
+    font-size: 18px;
+    text-align: right;
+    margin-top: -185px;
+}
+
+.nfc-icon-card {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+}
+
+.passenger-name-card {
+    font-size: 16px;
+    text-align: left;
+}
+
+.order-button-card {
+    background-color: #3c4d63;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+    width: 370px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.order-button-card span {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: lighter;
+}
+
+/*CARD.PHP CSS STYLE ENDS HERE*/
